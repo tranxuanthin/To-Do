@@ -18,8 +18,8 @@ class Task(models.Model):
    decription = models.CharField(max_length=200)
    dateofcompletion = models.DateField()
    status = models.CharField(max_length=9,choices=status_choices,default='NEW')
-   dateofcreation = models.DateTimeField(auto_now_add=True)
-   dateofmodification = models.DateField(auto_now=True)
+   dateofcreation = models.DateField()
+   dateofmodification = models.DateField()
   
 
 

@@ -9,7 +9,7 @@ from .models import Task
 from rest_framework.renderers import JSONRenderer
 from rest_framework.response import Response
 # Create your views here.
-class TestAPIView(APIView):
+class getalltodo(APIView):
     def get(seft,request):
         data = Task.objects.all()
         jon = taskSerializers(data,many=True) 

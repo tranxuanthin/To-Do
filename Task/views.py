@@ -44,4 +44,15 @@ class addtodo(APIView):
             return Response("Không đúng định dạng hoặc đã tồn tại")
         data.save()
         return Response("success") 
+class gettodobyid(APIView):
+    def get(seft,request,id):
+        
+        try:
+            data = Task.objects.get(id=id)
+            jon = taskSerializers(data,many=False) 
+            return Response(jon.data)
+        except:
+            return Response("Id does not exist")
+        
+        
 

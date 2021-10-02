@@ -4,7 +4,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login
-from .serializers import sigupSerializers,taskSerializers
+from .serializers import sigupSerializers,taskSerializers, userSerializers
 from .models import Task
 from rest_framework.renderers import JSONRenderer
 from rest_framework.response import Response
@@ -14,7 +14,11 @@ class getalltodo(APIView):
         data = Task.objects.all()
         jon = taskSerializers(data,many=True) 
         return Response(jon.data)
-
+class getalluser(APIView):
+    def get(seft,request):
+        data = User.objects.all()
+        jon = userSerializers(data,many=True) 
+        return Response(jon.data)
 class sigup(APIView):
     def post(seft,request):
         data = sigupSerializers(data=request.data)

@@ -12,6 +12,13 @@ class sigupSerializers(serializers.ModelSerializer):
    class Meta:
         model = User
         fields = ['username', 'password', 'email']
+class userSerializers(serializers.ModelSerializer):
+    # username = serializers.CharField(required=True)
+    # password = serializers.CharField(required=True)
+    # email = serializers.EmailField(required=True)
+   class Meta:
+        model = User
+        fields = ['username', 'email']
 class taskSerializers(serializers.ModelSerializer):
     class Meta:
         model = Task

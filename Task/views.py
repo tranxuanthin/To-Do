@@ -8,6 +8,7 @@ from .serializers import sigupSerializers,taskSerializers, userSerializers
 from .models import Task
 from rest_framework.renderers import JSONRenderer
 from rest_framework.response import Response
+import json
 # Create your views here.
 class getalltodo(APIView):
     def get(seft,request):
@@ -53,6 +54,37 @@ class gettodobyid(APIView):
             return Response(jon.data)
         except:
             return Response("Id does not exist")
+class assigntodo(APIView):
+    def put(self,request,id):
+        # try:
+            if(request.user.username==request.data['username']):
+                return Response("Khong duoc assign cho minh")
+            username = request.data['username']
+            user = User.objects.get(username=username)
+           
+            task = Task.objects.get(id=id)
+           
+            task.iduser = user
+           
+            task.save()
+          
+            # userdata = assigntodoSerializers(data=request.data)
+            # print(userdata)
+            # data = json.loads(userdata)
+            
+            # if not userdata.is_valid():
+            #     print(userdata.errors)
+            #     return Response("Không đúng định dạng")
+           
+            # userdata.save()
+            return Response("success") 
+        # except:
+        #     # print(data.getiduser())
+        #     print(request.user.username)
+        #     return Response("Id does not exist")
         
+        # data.get("iduser") = #tạo phương thức hướng đối tượng trong model,method trong serializers
+       
+
         
 

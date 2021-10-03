@@ -14,12 +14,16 @@ class Task(models.Model):
        ('NEW','NEW'),
    )
    name = models.CharField(max_length=200)
-   iduser = models.ForeignKey(User,on_delete=models.PROTECT)
+   iduser = models.ForeignKey(User,on_delete=models.SET_NULL,null=True)
    decription = models.CharField(max_length=200)
    dateofcompletion = models.DateField()
    status = models.CharField(max_length=9,choices=status_choices,default='NEW')
    dateofcreation = models.DateField()
    dateofmodification = models.DateField()
-  
+   def setiduser(self,id):
+       iduser = id
+       return self
+   def getiduser(self):
+       return self.iduser.id   
 
 

@@ -20,7 +20,11 @@ class userSerializers(serializers.ModelSerializer):
         model = User
         fields = ['username', 'email']
 class taskSerializers(serializers.ModelSerializer):
+   
     class Meta:
         model = Task
         fields = ['id','name','decription','iduser','dateofcompletion','status','dateofcreation','dateofmodification']
-       
+
+
+
+

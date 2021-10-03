@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from .views import  getalluser, sigup,addtodo,getalltodo,gettodobyid
+from .views import  getalluser, sigup,addtodo,getalltodo,gettodobyid,assigntodo
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
@@ -13,5 +13,6 @@ urlpatterns = [
     path('signup/', sigup.as_view(), name='sigup'),
     path('addtodo/', addtodo.as_view(), name='addtodo'),
     path('getalluser/', getalluser.as_view(), name='getalluser'),
+    path('assigntodo/<int:id>/', assigntodo.as_view(), name='assigntodo'),
 
 ]

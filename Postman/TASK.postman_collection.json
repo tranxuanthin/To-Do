@@ -1,0 +1,331 @@
+{
+	"info": {
+		"_postman_id": "12aacf88-88e8-48d4-a193-34f9c4f8cd29",
+		"name": "TASK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/task/getalltodo/",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMzMzE5MTM3LCJqdGkiOiIzN2Q0Nzc0NjJkZjU0NDNjOWFmODJkZDUxNTJjMzU5OSIsInVzZXJfaWQiOjF9.8omOvEnE-qqseJSLX5UDi15f375wAI30nI3WLbv_Ec8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/task/getalltodo/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"task",
+						"getalltodo",
+						""
+					]
+				},
+				"description": "getalltodo"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/task/updatetodo/",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMzMzE5MTM3LCJqdGkiOiIzN2Q0Nzc0NjJkZjU0NDNjOWFmODJkZDUxNTJjMzU5OSIsInVzZXJfaWQiOjF9.8omOvEnE-qqseJSLX5UDi15f375wAI30nI3WLbv_Ec8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n        \"id\": 1,\r\n        \"name\": \"thin\",\r\n        \"decription\": \"Hom nay toi buon\",\r\n        \"iduser\": 2,\r\n        \"dateofcompletion\": \"2021-10-13\",\r\n        \"status\": \"COMPLETE\",\r\n        \"dateofcreation\": \"2021-10-02\",\r\n        \"dateofmodification\": \"2021-10-02\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/task/updatetodo/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"task",
+						"updatetodo",
+						""
+					]
+				},
+				"description": "updatetodo"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/task/addtodo/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMzMzE5MTM3LCJqdGkiOiIzN2Q0Nzc0NjJkZjU0NDNjOWFmODJkZDUxNTJjMzU5OSIsInVzZXJfaWQiOjF9.8omOvEnE-qqseJSLX5UDi15f375wAI30nI3WLbv_Ec8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 1,\r\n        \"name\": \"thin11\",\r\n        \"decription\": \"Hom nay toi buon\",\r\n        \"iduser\": 3,\r\n        \"dateofcompletion\": \"2021-10-13\",\r\n        \"status\": \"COMPLETE\",\r\n        \"dateofcreation\": \"2021-10-02\",\r\n        \"dateofmodification\": \"2021-10-02\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/task/addtodo/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"task",
+						"addtodo",
+						""
+					]
+				},
+				"description": "addtodo"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/task/deletetodo/",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMzMzE4NTI1LCJqdGkiOiJiZWVhNjY1MmQzYTY0MzI2OGZhMjg5ZDMyZTFmYmVlZSIsInVzZXJfaWQiOjF9.r-qMkbTqSE9UfcEQ0g0Zf9F8Ddn4ijSsG9css7GA4w0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 19,\r\n        \"name\": \"thin\",\r\n        \"decription\": \"Hom nay toi buon\",\r\n        \"iduser\": 2,\r\n        \"dateofcompletion\": \"2021-10-13\",\r\n        \"status\": \"NEW\",\r\n        \"dateofcreation\": \"2021-10-02\",\r\n        \"dateofmodification\": \"2021-10-02\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/task/deletetodo/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"task",
+						"deletetodo",
+						""
+					]
+				},
+				"description": "deletetodo"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/task/signin/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"thin\",\"password\": \"123\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/task/signin/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"task",
+						"signin",
+						""
+					]
+				},
+				"description": "signin"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/task/assigntodo/1/",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMzMzU5Mzc2LCJqdGkiOiJiMzIzMGUzYzY0NzE0MzI2OGIwN2ZjNjBhYWZlODk4OCIsInVzZXJfaWQiOjF9.cSoMMkmho8wSCt1dNpeu7ur-BGKPdP_OYo_L0Dy7uho",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"Teo\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/task/assigntodo/22/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"task",
+						"assigntodo",
+						"22",
+						""
+					]
+				},
+				"description": "assigntodo"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/task/gettodobyid/1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMzMzE4NTI1LCJqdGkiOiJiZWVhNjY1MmQzYTY0MzI2OGZhMjg5ZDMyZTFmYmVlZSIsInVzZXJfaWQiOjF9.r-qMkbTqSE9UfcEQ0g0Zf9F8Ddn4ijSsG9css7GA4w0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/task/gettodobyid/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"task",
+						"gettodobyid",
+						"1"
+					]
+				},
+				"description": "gettodobyid"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/task/getalluser/",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMzMzE4NTI1LCJqdGkiOiJiZWVhNjY1MmQzYTY0MzI2OGZhMjg5ZDMyZTFmYmVlZSIsInVzZXJfaWQiOjF9.r-qMkbTqSE9UfcEQ0g0Zf9F8Ddn4ijSsG9css7GA4w0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/task/getalluser/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"task",
+						"getalluser",
+						""
+					]
+				},
+				"description": "getalluser"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/task/signup/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Cudau\",\r\n    \"password\": \"123\",\r\n    \"email\": \"cudau@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/task/signup/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"task",
+						"signup",
+						""
+					]
+				},
+				"description": "signup"
+			},
+			"response": []
+		}
+	]
+}

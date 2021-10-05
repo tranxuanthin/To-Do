@@ -13,6 +13,7 @@ class Task(models.Model):
        ('COMPLETE','COMPLETE'),
        ('NEW','NEW'),
    )
+   id = models.IntegerField(primary_key=True)
    name = models.CharField(max_length=200)
    iduser = models.ForeignKey(User,on_delete=models.SET_NULL,null=True)
    decription = models.CharField(max_length=200)

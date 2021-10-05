@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from .views import  getalluser, sigup,addtodo,getalltodo,gettodobyid,assigntodo,updatetodo,deletetodo
+from .views import  getalluser, signup,addtodo,getalltodo,gettodobyid,assigntodo,updatetodo,deletetodo
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
@@ -10,7 +10,7 @@ urlpatterns = [
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('getalltodo/', getalltodo.as_view(), name='getalltodo'),
     path('gettodobyid/<int:id>/', gettodobyid.as_view(), name='gettodobyid'),
-    path('signup/', sigup.as_view(), name='sigup'),
+    path('signup/', signup.as_view(), name='signup'),
     path('addtodo/', addtodo.as_view(), name='addtodo'),
     path('getalluser/', getalluser.as_view(), name='getalluser'),
     path('assigntodo/<int:id>/', assigntodo.as_view(), name='assigntodo'),

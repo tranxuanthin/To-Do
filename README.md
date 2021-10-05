@@ -19,7 +19,7 @@ Tải xampp-> start Apache và Mysql -> phpadmin -> import file task.sql(trong s
 
 # Mô tả  API
 - API 1 / SIGN-UP:
-- Khi gửi request lên server với body json có username, password, email nếu username không trùng trong hệ thống thì server sẽ báo tạo thành công. Password được mã hóa trước khi lưu vào database.
+ Khi gửi request lên server với body json có username, password, email nếu username không trùng trong hệ thống thì server sẽ báo tạo thành công. Password được mã hóa trước khi lưu vào database.
 - API 2 / SIGN-IN:
 - Khi đăng nhập vào hệ thống sẽ gửi về mã token xác thực định danh.
 - Các API dưới đây đều phải có mã token định danh .
@@ -27,22 +27,22 @@ Tải xampp-> start Apache và Mysql -> phpadmin -> import file task.sql(trong s
 - Mã token đúng là mã như sau: Bearer +" " + mã token đăng nhập.
 - Mã iduser nếu gửi lên mà hệ thống không tồn tại user sẽ lỗi.
 - API 3 / ADD-TO-DO:
-- id trong json gửi lên phải chưa tồn tại. Nếu đúng dữ liệu sẽ được thêm một task.
+ id trong json gửi lên phải chưa tồn tại. Nếu đúng dữ liệu sẽ được thêm một task.
 - API 4 / UPDATE-TO-DO:
-- id trong json gửi lên phải tồn tại và status tồn tại phải là new. Nếu đúng sẽ cập nhật được task.
+ id trong json gửi lên phải tồn tại và status tồn tại phải là new. Nếu đúng sẽ cập nhật được task.
 - API 5 / REMOVE-TO-DO:
-- id trong json gửi lên phải tồn tại và status tồn tại phải là new. Nếu đúng sẽ xóa được task.
+ id trong json gửi lên phải tồn tại và status tồn tại phải là new. Nếu đúng sẽ xóa được task.
 - API 6 / GET-ALL-TO-DO:
-- Trả về tất cả các task
+ Trả về tất cả các task
 - API 7 / GET-TO-DO-BY-ID:
-- id trong url phải tồn tại. Nếu đúng sẽ lấy được task với id đó.
+ id trong url phải tồn tại. Nếu đúng sẽ lấy được task với id đó.
 - API 8 / GET-ALL-USER:
-- Trả về danh sách các tên user ứng với email.
+ Trả về danh sách các tên user ứng với email.
 - API 9 / ASSIGN-TO-DO:
-- Không assign cho user chứng thực JWT đang được dùng. Id task phải tồn tại. Gửi tên username được assign phải tồn tại trong hệ thống.
+ Không assign cho user chứng thực JWT đang được dùng. Id task phải tồn tại. Gửi tên username được assign phải tồn tại trong hệ thống.
 - Phần nâng cao.
-- Mật khẩu được mã hóa rồi lưu vào cơ sở dữ liệu.
-- Sử dụng docker : chưa làm được. Thay vào đó sử dụng venv đi cùng python để deploy.
+ Mật khẩu được mã hóa rồi lưu vào cơ sở dữ liệu.
+ Sử dụng docker : chưa làm được. Thay vào đó sử dụng venv đi cùng python để deploy.
 
 
 
